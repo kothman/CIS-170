@@ -1,0 +1,288 @@
+<!--
+filename:   index.html
+title:      Gay Panic
+author:     Morgan Kothman
+class:      CIS-170-30148
+assignment: Project 1 ~ Personal Passion Project
+date:       July 15, 2024
+description:
+    This is a single-page static website meant to demonstrate my understanding of HTML for CIS-170, project 1.
+I chose the topic of the Gay Panic because of its modern relevance and impact on my own day-to-day life.
+
+-->
+<!-- Lets the browser know what type of XML document this is -->
+<!DOCTYPE html>
+<!-- Lets the browser know what language we're working with -->
+<html lang="en-US">
+<!--
+The head element includes helpful information to the browser for rendering content. This isn't the actual content, but does affect how it's
+ displayed and interpreted by different browsers and devices.
+-->
+<head>
+    <!-- A meta tag to help the browser understand what type of content this is (text/HTML), and what charset it's using (utf-8)-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Title of the website, displayed above the URL bar -->
+    <title>Gay Panic</title>
+    <!-- Required to make  content responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Specifies the document mode for Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--
+     I used a style block to include inline CSS, since we're just uploading a single file for this project.
+     CSS Reset is a nice way to reset and standardize HTML elements for individualized uses.
+     -->
+    <style>
+        /* CSS Reset
+         http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 2011012
+        License: none (public domain)
+        */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            box-sizing: border-box;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /* User Styles */
+        /* Make html and body fit screen width */
+        html, body {
+            display: block;
+            width: 100%;
+        }
+        /* Define our own heading font-sizes */
+        h1 {
+            font-size:4rem;
+            text-decoration: underline;
+            margin-bottom: .5rem;
+        }
+        h2 {
+            font-size:3rem;
+        }
+        h3 {
+            font-size:2rem;
+        }
+        h4 {
+            font-size:1.5rem;
+        }
+        h5 {
+            font-size:1.25rem;
+        }
+        h6 {
+            font-size:4rem;
+        }
+
+        header {
+            display: flex;
+        }
+        header div + div {
+            margin-left: 2rem;
+        }
+        header img {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .padding {
+            padding: 2rem;
+        }
+        .margin {
+            margin: 2rem;
+        }
+        header {
+            padding: 2rem;
+            padding-bottom: 0;
+        }
+        footer {
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        footer p {
+            text-indent: 0;
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+        div.section {
+            padding: 1rem 1rem;
+            max-width: 100%;
+        }
+        p {
+            text-indent: 2rem;
+            line-height: 2rem;
+            max-width: 600px;
+        }
+        footer ul {
+            max-width: 600px;
+            line-height: 2rem;
+            list-style-type: disc;
+        }
+        footer ul ul {
+            list-style-type: "-  ";
+            margin-left: 2rem;
+            font-style: italic;
+        }
+        a, a:visited {
+            color: rgb(3, 42, 70);
+        }
+        a:hover, a:visited:hover {
+            color: rgb(58, 93, 117);
+        }
+        .ml-auto {
+            margin-left: auto;
+        }
+        .mr-auto {
+            margin-right: auto;
+        }
+        .mr-1 {
+            margin-right: 1rem;
+        }
+        .m-auto {
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 600px;
+            flex-shrink: 1;
+
+        }
+
+        @media screen and (max-width: 1200px) {
+            header {
+                display: block;
+            }
+            header div {
+                max-width:600px;
+                margin: auto;
+            }
+            header div + div {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 1rem;
+                text-align: center;
+            }
+            header div img, header div .source  {
+                margin-bottom: 1rem;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            .flex {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        @media screen and (min-width: 600px) {
+            div.section {
+                padding: 1rem 8rem;
+            }
+        }
+    </style>
+</head>    
+<body>
+    <!-- Begin actual content -->
+    <header>
+        <div>
+            <!-- h1 is the largest heading element, h6 the smallest. Because I used a CSS Reset, I had to define these sizes manually. -->
+            <!-- Title -->
+            <h1>The Gay Panic</h1>
+            <!-- Subtitle -->
+            <h3>A brief history of the Gay Panic in the late 1900's,
+                and its relevance to the present day Trans Panic.</h3>
+        </div>
+        <div>
+            <!-- img element - src defines the image URL, and alt is used by screen readers to give an audio or text description of the picture. -->
+            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2017-06/27/14/asset/buzzfeed-prod-fastlane-01/sub-buzz-5680-1498587310-10.jpg" alt="the straights are upset" >
+            <!-- a element, or anchor link: href defines the URL for this element, because why would they be the same? `target="_blank"` opens page in new tab. -->
+            <div class="source">(source: <a href="https://www.buzzfeednews.com/article/gabrielsanchez/this-is-what-gay-liberation-looked-like-in-the-70s" target="_blank">Buzzfeed News</a>)</div>
+        </div>
+    </header>
+    <hr>
+    <!-- My sections. It would also make sense semantically to use the <section> element. -->
+    <div class="section">
+        <p class="mr-auto">The phrase "Gay Panic" refers to homophobic fearmongering and violence. <a href="https://www.americanbar.org/groups/crsj/publications/member-features/gay-trans-panic-defense/" target="_blank">Gay panic and trans panic have been used as a legal defense for excusing murder and violence against queer people</a>, especially queer people of color.</p>
+    </div>
+    <hr>
+    <div class="section">
+        <p class="ml-auto">It wasn't until 1973 that being gay was <a href="https://www.psychologytoday.com/us/blog/hide-and-seek/201509/when-homosexuality-stopped-being-a-mental-disorder" target="_blank">removed from the DSM as a mental disorder</a>. For trans people to access hormones (and get insurers to pay for it), a mental health diagnosis of gender dysphoria is still required.</p>
+    </div>
+    <hr>
+    <div class="section">
+        <!-- The class attribute is helpful for quickly applying standardized CSS styling to different elements -->
+        <div class="flex">
+            <!-- Another image, to fill out the page -->
+            <img src="https://static.politifact.com/politifact/photos/Grooming_use_examples_.001.jpeg" alt="conservative media outlets accusing LGBTQ people of grooming" class="mr-1">
+            <p class="mr-auto">Despite this change in the DSM, being gay or queer was still seen by many as a mental disorder. More extreme reactionaries bought into and pushed rhetoric that <a href="https://nymag.com/intelligencer/2022/05/the-long-sordid-history-of-the-gay-conspiracy-theory.html" target="_blank">accused gay men of being pedophiles and sex perverts</a> who would come for your children in the bathrooms.</p>
+        </div>
+    </div>
+    <hr>
+    <div class="section">
+        <p class="ml-auto">Recent conversations in the media surrounding trans people have eerily mirrored the same panic towards gay men in the 20th century. Any conversation about gender identity or sexual orientation in schools is <a href="https://www.politifact.com/article/2022/may/11/why-its-not-grooming-what-research-says-about-gend/" target="_blank">made out to be grooming</a>.</p>
+    </div>
+    <hr>
+    <div class="section">
+        <p class="mr-auto">Despite narratives pushed by media, most folks don't really care about someone's gender identity or sexual orientation. While I've been asked many interesting questions about being trans, most of these questions simply come from a place of unfamiliarity.</p>
+    </div>
+    <hr>
+    <!-- My footer section - a call to action to wrap things up. I also needed to include an ordered or unordered list.-->
+    <footer>
+        <div class="section">
+            <p class="ml-auto">While many people feel completely powerless to create change in the face of such brutal oppression, there are a number of actions we can take in our local communities to encourage social and political change.</p>
+            <!-- Unordered List -->
+            <ul class="m-auto">
+                <!-- List Item -->
+                <li>Get to know your neighbors
+                    <!-- Lists can be embeded in other lists, but I think they need to be put inside the list element to be considered valid HTML. -->
+                    <ul><li>Getting to know the people in your community can help you form the relationships necessary to accomplish larger goals</li></ul></li>
+                <li>Help your friends and family understand this history
+                    <ul><li>Many people don't understand just how pervasive and systemic anti-LGBT ideologies have been</li></ul></li>
+                <li>Encourage local businesses and institutions to adopt gender neutral bathrooms as the default
+                    <ul><li>Having an extra gender neutral bathroom amongst plentiful gendered bathrooms often makes trans people feel othered when they're trying to go about a normal day</li></ul></li>
+                <li>Vocally denounce and reject homophobic and transphobic ideas and viewpoints
+                    <ul><li>We make our communities safer by standing up for each other</li></ul></li>
+            </ul>
+        </div>
+        <div><p class="section"></p></div>
+        <div><p class="section">By: <a href="https://github.com/kothman/" target="_blank">Morgan Kothman</a></p></div>
+    </footer>
+</body>
+</html><!-- Don't forget all of the closing tags! -->
+<!-- This is the end of the HTML document. Ideally, it wouldn't end with any trailing newlines or whitespaces, but the browser doesn't really care. -->

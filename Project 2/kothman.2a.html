@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <!--
+        Project 2 - A
+        07/17/2024
+        Morgan Kothman 
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Morgan's Daily Schedule</title>
+    <style>
+        /* My Styles */
+        :root {
+            --box-shadow: 0px -4px 4px 2px rgba(255,255,255,.8);
+            --border: 1px solid black;
+            --border-thick: 2px solid black;
+            --border-white: 1px solid white;
+            --border-white-thick: 2px solid white;
+            --padding: 1rem;
+            --background-light-blue: rgb(228, 254, 255);
+
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 1rem;
+            line-height: 1.5;
+            background-color: rgb(160, 252, 255);
+            align-content: center;
+            padding: 4rem;
+        }
+        table {
+            border-spacing: 0px;
+            border-left: var(--border);
+            border-bottom: var(--border);
+            border-right: var(--border);
+            margin: auto;
+            box-shadow: var(--box-shadow);
+            text-align: left;
+            background-color: var(--background-light-blue);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            
+            caption {
+                border-left: var(--border);
+                border-top: var(--border);
+                border-right: var(--border);
+                border-bottom: var(--border-thick);
+                width: 100%;
+                padding-left: var(--padding);
+                background-color: #ffcaca;
+                box-shadow: var(--box-shadow);
+                text-align: left;
+            }
+
+            td {
+                padding: 1rem;
+                border-bottom: var(--border);
+                background-color: white;            
+            }
+            td:not(:last-child) {
+                border-right: var(--border);
+            }
+            thead tr {
+                border-bottom: var(--border);
+                th {
+                    text-decoration: underline;
+                }
+                th:not(:last-child) {
+                    border-right: var(--border);
+                }
+                th, td {
+                    text-align: center;
+                    padding: var(--padding);
+                    vertical-align: top;
+                    background-color: var(--background-light-blue);
+                }
+                &:first-child th {
+                    border-bottom: var(--border);
+                }
+                &:last-child td {
+                    border-bottom: 4px solid black;
+                    padding-top: .5rem;
+                    padding-bottom: .5rem;
+                }
+            }
+            tbody tr td {
+                    padding: var(--padding);
+                    vertical-align: top;
+            }
+            tbody tr td:first-child {
+                border-bottom-left-radius: 8px;
+            }
+            tbody tr td:nth-child(3) {
+                font-style: italic;
+            }
+            tbody tr td:last-child {
+                border-bottom-right-radius: 8px;
+            }
+            tfoot tr {
+                td {
+                    border-bottom: 0px solid black;
+                }
+                td:last-child {
+                    border-bottom-right-radius: 8px;
+                }
+                th {
+                    padding: var(--padding);
+                    border-right: var(--border);
+                }
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Begin table content -->
+    <table>
+        <caption><h3>Morgan's Daily Schedule</h3></caption>
+        <thead>
+            <!-- Table headers -->
+            <tr>
+                <th>Start</th>
+                <th>End</th>
+                <th>Activity</th>
+                <th>Duration</th>
+                <th>Difficulty</th>
+            </tr>
+            <!-- Sub-headers -->
+            <tr>
+                <td >hh:mm</td>
+                <td >hh:mm</td>
+                <td></td>
+                <td>hh:mm</td>
+                <td>(1-10)</td>
+            </tr>
+        </thead>
+        <!-- Body content - My Schedule -->
+        <tbody>
+            <tr>
+                <td>7:00am</td>
+                <td>7:30am</td>
+                <td>wake up</td>
+                <td>00:30</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>7:30am</td>
+                <td>8:00am</td>
+                <td>eat breakfast</td>
+                <td>00:30</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>8:00am</td>
+                <td>8:30am</td>
+                <td>shower, brush teeth, get dressed</td>
+                <td>00:30</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8:30am</td>
+                <td>8:45am</td>
+                <td>drive to work</td>
+                <td>00:15</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>8:45am</td>
+                <td>5:00pm</td>
+                <td>work work work work work</td>
+                <td>08:30</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>5:00pm</td>
+                <td>5:15pm</td>
+                <td>drive home</td>
+                <td>00:15</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5:15pm</td>
+                <td>6:30pm</td>
+                <td>eat a snack and get dinner ready</td>
+                <td>01:15</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>6:30pm</td>
+                <td>7:00pm</td>
+                <td>eat dinner</td>
+                <td>00:30</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>7:00pm</td>
+                <td>9:00pm</td>
+                <td>study and and work on homework</td>
+                <td>02:00</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>9:00pm</td>
+                <td>11:00pm</td>
+                <td>wind down and get ready for bed</td>
+                <td>02:00</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>11:00pm</td>
+                <td>7:00am</td>
+                <td>zzz</td>
+                <td>08:00</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+        <!-- footer content -->
+        <tfoot>
+            <tr>
+                <th>Note</th>
+                <td colspan="4" style="font-style: italic;"><small>This schedule may or may not reflect an actual schedule. All schedule items are subject to change at any moment without notice. By viewing this schedule, you wave your right to sue KOTHMAN LLC, and agree to settle any disputes in an arbitration process mediated by a trained company-appointed specialist.</small></td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- end table content -->
+</body>
+</html>
